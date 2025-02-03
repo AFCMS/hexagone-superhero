@@ -3,6 +3,7 @@ import { ApiSuperhero } from "./ApiSuperhero";
 
 type ApiSuperherosResponse = {
   response: string;
+  error: string;
   results: ApiSuperhero[];
 };
 
