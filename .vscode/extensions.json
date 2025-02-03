@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "remcohaszing.schemastore",
+    "dbaeumer.vscode-eslint",
+    "pkief.material-icon-theme"
+  ]
+}
