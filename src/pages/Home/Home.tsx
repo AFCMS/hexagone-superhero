@@ -7,7 +7,7 @@ export default function Home() {
           className="max-w-sm rounded-lg shadow-2xl"
         />
         <div className="">
-          <h1 className="text-5xl font-bold">Game Lists!</h1>
+          <h1 className="text-5xl font-bold">Superhero List!</h1>
           <p className="py-6">
             Search for superheros and view their details. See pictures of them
             and other things.

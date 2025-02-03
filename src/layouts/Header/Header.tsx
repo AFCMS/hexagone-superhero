@@ -26,29 +26,36 @@ export default function Header() {
       </div>
       <div className="flex gap-2">
         {user?.email ? (
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              const formData = new FormData(e.target as HTMLFormElement);
-              const searchQuery = formData.get("search") as string;
-              navigate(`/superhero?search=${encodeURIComponent(searchQuery)}`);
-            }}
-          >
-            <input
-              name="search"
-              title="Login first"
-              type="text"
-              defaultValue={
-                new URLSearchParams(location.search).get("search") ?? ""
-              }
-              placeholder="Search Superheros"
-              className="input input-bordered w-24 md:w-auto"
-            />
-          </form>
+          <>
+            <NavLink to="/contact" className="btn btn-ghost">
+              Contact
+            </NavLink>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target as HTMLFormElement);
+                const searchQuery = formData.get("search") as string;
+                navigate(
+                  `/superhero?search=${encodeURIComponent(searchQuery)}`
+                );
+              }}
+            >
+              <input
+                name="search"
+                type="text"
+                defaultValue={
+                  new URLSearchParams(location.search).get("search") ?? ""
+                }
+                placeholder="Search Superheros"
+                className="input input-bordered w-24 md:w-auto"
+              />
+            </form>
+          </>
         ) : (
           <input
             name="search"
             type="text"
+            title="Login first"
             disabled
             defaultValue={
               new URLSearchParams(location.search).get("search") ?? ""
