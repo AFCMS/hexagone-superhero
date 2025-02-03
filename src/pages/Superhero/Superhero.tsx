@@ -25,24 +25,26 @@ export default function Superhero() {
                   <p className="py-6">{data.biography["full-name"]}</p>
                   <p className="pb-6">{data.work.occupation}</p>
                   <div className="flex flex-row gap-2 mb-4">
-                    <span className="badge badge-soft badge-neutral">
-                      Combat: {data.powerstats.combat}
-                    </span>
-                    <span className="badge badge-soft badge-neutral">
-                      Durability: {data.powerstats.durability}
-                    </span>
-                    <span className="badge badge-soft badge-neutral">
-                      Intelligence: {data.powerstats.intelligence}
-                    </span>
-                    <span className="badge badge-soft badge-neutral">
-                      Power: {data.powerstats.power}
-                    </span>
-                    <span className="badge badge-soft badge-neutral">
-                      Speed: {data.powerstats.speed}
-                    </span>
-                    <span className="badge badge-soft badge-neutral">
-                      Strength: {data.powerstats.strength}
-                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="badge badge-soft badge-neutral">
+                        Combat: {data.powerstats.combat}
+                      </span>
+                      <span className="badge badge-soft badge-neutral">
+                        Durability: {data.powerstats.durability}
+                      </span>
+                      <span className="badge badge-soft badge-neutral">
+                        Intelligence: {data.powerstats.intelligence}
+                      </span>
+                      <span className="badge badge-soft badge-neutral">
+                        Power: {data.powerstats.power}
+                      </span>
+                      <span className="badge badge-soft badge-neutral">
+                        Speed: {data.powerstats.speed}
+                      </span>
+                      <span className="badge badge-soft badge-neutral">
+                        Strength: {data.powerstats.strength}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
